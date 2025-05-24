@@ -15,13 +15,11 @@ spec:
         app: javawebcalculator
     spec:
       containers:
-      - name: javawebcalculator
-        image: vmns/dockerdcicd
-        ports:
-        - containerPort: 8080
-
+        - name: javawebcalculator
+          image: vmns/dockerdcicd
+          ports:
+            - containerPort: 8080
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -31,7 +29,6 @@ spec:
     app: javawebcalculator
   ports:
     - protocol: TCP
-      port: 80  # Exposed port on the Service
-      targetPort: 8080 # Port inside the container (Tomcat)
-  type: LoadBalancer  # External acces
-~                                      
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
