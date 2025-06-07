@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: vmns/mani
+        image: vmns/cicd
         ports:
         - containerPort: 8080
