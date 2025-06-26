@@ -37,11 +37,11 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: store-ingress
+  name: javawebcalculator-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /onlinebookstore/$1
 spec:
-  ingressClassName: nginx
+  ingressClassName: javawebcalculator
   rules:
   - host: www.onlnbookstr.com
     http:
