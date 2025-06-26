@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: javawebcalculator
-          image: vmns/dockerdcicd
+          image: siripriyanka/store
           ports:
             - containerPort: 8080
 ---
