@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: javawebcalculator
-          image: siripriyanka/store
+          image: vamshidhar1128/bookstore
           ports:
             - containerPort: 8080
 ---
@@ -43,7 +43,7 @@ metadata:
 spec:
   ingressClassName: javawebcalculator
   rules:
-  - host: www.onlnbookstr.com
+  - host: www.onlbookst.com
     http:
       paths:
       - path: /?(.*)
