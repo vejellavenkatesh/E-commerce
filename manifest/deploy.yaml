@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: javawebcalculator
-          image: vamshidhar1128/bookstore
+          image: vmns/cicd
           ports:
             - containerPort: 8080
 ---
