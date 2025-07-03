@@ -1,4 +1,4 @@
-name: CICD Pipeline 
+name: CICD Pipeline
 
 on:
   push:
@@ -22,3 +22,7 @@ jobs:
   security-check:
     runs-on: self-hosted
     needs: compile
+
+    steps:
+    - name: Security Scan (Placeholder)
+      run: echo "Running security scan..."
