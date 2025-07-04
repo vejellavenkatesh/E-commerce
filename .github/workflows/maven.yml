@@ -21,7 +21,7 @@ jobs:
           cache: maven
 
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn compile
 
   security-check:
     runs-on: self-hosted
@@ -53,6 +53,8 @@ jobs:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
+      - name: Build with Maven
+        run: mvn build
 
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@v5.2.0
@@ -61,6 +63,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+          
   docker-build-push:
       runs-on: self-hosted
       needs: security-check  # optional: only run after security-check
