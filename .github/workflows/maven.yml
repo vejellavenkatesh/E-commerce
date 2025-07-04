@@ -33,5 +33,6 @@ jobs:
        sudo apt-get update -y
        sudo apt-get install trivy -y
     - name: Trivy Fs Scan
-      run:  trivy fs --format -o fs-report.json .   
+      run: trivy fs --format json -o fs-report.json .
+ 
    
