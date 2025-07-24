@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: new1
-        image: vmns/new2
+        image: vmns/online
         ports:
         - containerPort: 8082
 ---
