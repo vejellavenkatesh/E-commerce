@@ -14,7 +14,11 @@ pipeline {
                 git url: "${GITHUB_REPO_URL}", branch: 'main'
             }
         }
-        
+
+         stage('Build') {
+            steps {
+                // Build the project using Maven
+                sh 'mvn clean package'
        
             }
         }
